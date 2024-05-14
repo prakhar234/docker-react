@@ -1,17 +1,17 @@
-#Build phase
-FROM node:19-bullseye as builder
+# #Build phase
+# FROM node:19-bullseye as builder
 
-WORKDIR /app
+# WORKDIR /app
 
-COPY package.json .
+# COPY package.json .
 
-RUN npm install
+# RUN npm install
 
-COPY . .
+# COPY . .
 
-RUN npm run build
+# RUN npm run build
 
-#RUN Phase
+# #RUN Phase
 
-FROM nginx
-COPY --from=builder /app/build /usr/share/nginx/html
+# FROM nginx
+# COPY --from=builder /app/build /usr/share/nginx/html
